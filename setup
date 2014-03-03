@@ -24,7 +24,7 @@ rm google-chrome-stable_current_amd64.deb
 '
 
 #set up launcher 
-gsettings set com.canonical.Unity.Launcher favorites "['unity://running-apps', 'application://gnome-control-center.desktop', 'unity://expo-icon', 'unity://devices']"
+gsettings set com.canonical.Unity.Launcher favorites "['unity://running-apps', 'application://gnome-control-center.desktop', 'unity://expo-icon', 'unity://devices', 'nautilus-folder-handler.desktop']"
 
 #workspaces
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
@@ -43,6 +43,7 @@ tar -xvzf arduino-1.0.5-linux64.tgz
 rm arduino-1.0.5-linux64.tgz
 rm 49-teensy.rules
 ./teensyduino.64.bit
+
 
 
 #for adobe and spotify, follow the instructions on the website
