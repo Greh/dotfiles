@@ -8,6 +8,8 @@ sudo apt-get install virtualbox -y
 sudo apt-get install vagrant -y
 sudo apt-get install kicad -y 
 sudo apt-get install build-essential -y
+sudo apt-get install python-pip -y
+sudo pip install virtualenv -y
 
 touch .vimrc
 echo "set smartindent
@@ -44,6 +46,10 @@ rm arduino-1.0.5-linux64.tgz
 rm 49-teensy.rules
 ./teensyduino.64.bit
 
+#puppet 
+:'wget https://pm.puppetlabs.com/cgi-bin/download.cgi?ver=latest&dist=ubuntu&arch=amd64&rel=12.04
+tar 
+'
 
 
 #for adobe and spotify, follow the instructions on the website
