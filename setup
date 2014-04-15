@@ -6,33 +6,42 @@ sudo apt-get install vim -y
 sudo apt-get install python3 -y
 sudo apt-get install virtualbox -y
 sudo apt-get install vagrant -y
-sudo apt-get install kicad -y 
+sudo apt-get install kicad -y
 sudo apt-get install build-essential -y
 sudo apt-get install python-pip -y
 sudo pip install virtualenv -y
+sudo apt-get install build-essential -y
 
 touch .vimrc
 echo "set smartindent
-set tabstop=4 
+set tabstop=4
 set shiftwidth=4
-set expandtab " > .vimrc
+set expandtab
+
+set number
+set numberwidth=2
+set colorcolumn=80
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+autocmd FileType make setlocal noexpandtab" > .vimrc
 
 #chrome
 :'
-sudo apt-get install libxss1 -y 
+sudo apt-get install libxss1 -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 rm google-chrome-stable_current_amd64.deb
 '
 
-#set up launcher 
+#set up launcher
 gsettings set com.canonical.Unity.Launcher favorites "['unity://running-apps', 'application://gnome-control-center.desktop', 'unity://expo-icon', 'unity://devices', 'nautilus-folder-handler.desktop']"
 
 #workspaces
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
 
-#teensyduino 
+#teensyduino
 sudo apt-get install gcc-avr avr-libc
 sudo apt-get install openjdk-6-jre
 wget http://www.pjrc.com/teensy/td_118/teensyduino.64bit
@@ -46,9 +55,9 @@ rm arduino-1.0.5-linux64.tgz
 rm 49-teensy.rules
 ./teensyduino.64.bit
 
-#puppet 
+#puppet
 :'wget https://pm.puppetlabs.com/cgi-bin/download.cgi?ver=latest&dist=ubuntu&arch=amd64&rel=12.04
-tar 
+tar
 '
 
 
