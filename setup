@@ -20,7 +20,7 @@ set expandtab
 
 set number
 set numberwidth=2
-set colorcolumn=80
+set colorcolumn=78
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
